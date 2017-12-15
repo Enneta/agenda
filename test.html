@@ -1,11 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-      <meta charset="utf-8">
-</head>
-
+<html>
 <body>
-
 <!-- ++++++++++++++++++++ Tableau HTML ++++++++++++++++++++ -->
 <table>
   <tr >
@@ -16,45 +11,45 @@
     <th>Jeudi</th>
     <th>Vendredi</th>
   </tr>
-  <tr id="huit-heure">
+  <tr id="heure8">
     <td class="heure">8H - 9H</td>
-    <td class="lundi"><p></p><button onclick="ajouter('huit-heure','lundi')">+</button></td>
-    <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="vendredi"><p></p><button onclick="ajouter()">+</button></td>
+    <td id="1" onclick="modify('1')">+</td>
+    <td id="2" onclick="modify('2')">+</td>
+    <td id="3" onclick="modify('3')">+</td>
+    <td id="4" onclick="modify('4')">+</td>
+    <td id="5" onclick="modify('5')">+</td>
   </tr>
   <tr id="neuf-heure">
     <td class="heure">9H - 10H</td>
-    <td class="lundi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="vendredi"><p></p><button onclick="ajouter()">+</button></td>
+    <td id="6" onclick="modify('6')">+</td>
+    <td id="7" onclick="modify('7')">+</td>
+    <td id="8" onclick="modify('8')">+</td>
+    <td id="9" onclick="modify('9')">+</td>
+    <td id="10" onclick="modify('10')">+</td>
   </tr>
   <tr id="dix-heure">
     <td class="heure">10H - 11H</td>
-    <td class="lundi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="vendredi"><p></p><button onclick="ajouter()">+</button></td>
+    <td id="11" onclick="modify('11')">+</td>
+    <td id="12" onclick="modify('12')">+</td>
+    <td id="13" onclick="modify('13')">+</td>
+    <td id="14" onclick="modify('14')">+</td>
+    <td id="15" onclick="modify('15')">+</td>
   </tr>
   <tr id="onze-heure">
     <td class="heure">11H - 12H</td>
-    <td class="lundi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="vendredi"><p></p><button onclick="ajouter()">+</button></td>
+    <td id="16" onclick="modify('16')">+</td>
+    <td id="17" onclick="modify('17')">+</td>
+    <td id="18" onclick="modify('18')">+</td>
+    <td id="19" onclick="modify('19')">+</td>
+    <td id="20" onclick="modify('20')">+</td>
   </tr>
   <tr id="douze-heure">
     <td class="heure">12H - 13H</td>
-    <td class="lundi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
-    <td class="vendredi"><p></p><button onclick="ajouter()">+</button></td>
+    <td id="21" onclick="modify('21')">+</td>
+    <td id="22" onclick="modify('22')">+</td>
+    <td id="23" onclick="modify('23')">+</td>
+    <td id="24" onclick="modify('24')">+</td>
+    <td id="25" onclick="modify('25')">+</td>
   </tr>
 </table>
 
@@ -87,31 +82,14 @@ th, td {
 
 
 <!-- ++++++++++++++++++++ JavaScript ++++++++++++++++++++ -->
+
+
+
 <script>
-
-function ajouter(heure, jour){
-  var nom = prompt("Entrer le nom");
-  document.getElementById(heure).getElementByClass(jour).appendChild(nom);
+function modify(test) {
+    var nom = prompt("Entrer le nom")
+    document.getElementById(test).textContent = nom;
 }
-
-
-/*
-if (document.getElementById("huit-heure").getElementById("lundi"))
-
-
-var journaux = ["http://lemonde.fr", "http://lefigaro.fr", "http://liberation.fr"];
-
-
-var i = 0;
-while (i < journaux.length){
-  var elt = document.createElement("a");
-  elt.textContent = journaux[i];
-  elt.href = journaux[i];
-  document.getElementById("contenu").appendChild(elt);
-  document.getElementById("contenu").appendChild(document.createElement("br"));
-  i++;
-}-->
-*/
 </script>
 
 </body>
