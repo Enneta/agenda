@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="utf-8">
+</head>
+
+<body>
+
 <!-- ++++++++++++++++++++ Tableau HTML ++++++++++++++++++++ -->
 <table>
   <tr >
@@ -10,7 +18,7 @@
   </tr>
   <tr id="huit-heure">
     <td class="heure">8H - 9H</td>
-    <td class="lundi"><p></p><button onclick="ajouter('lundi',8)">+</button></td>
+    <td class="lundi"><p></p><button onclick="ajouter('huit-heure','lundi')">+</button></td>
     <td class="mardi"><p></p><button onclick="ajouter()">+</button></td>
     <td class="mercredi"><p></p><button onclick="ajouter()">+</button></td>
     <td class="jeudi"><p></p><button onclick="ajouter()">+</button></td>
@@ -56,6 +64,8 @@
 button{
 
   background-color: #AF7979 ;
+  border-radius: 50px;
+  border-color: rgba(255, 255, 255, 0);
 }
 table, th, td {
   border: 1px solid black;
@@ -79,8 +89,10 @@ th, td {
 <!-- ++++++++++++++++++++ JavaScript ++++++++++++++++++++ -->
 <script>
 
-console.log(document.getElementById("huit-heure").getElementById("lundi"));
-
+function ajouter(heure, jour){
+  var nom = prompt("Entrer le nom");
+  document.getElementById(heure).getElementByClass(jour).appendChild(nom);
+}
 
 
 /*
@@ -101,3 +113,6 @@ while (i < journaux.length){
 }-->
 */
 </script>
+
+</body>
+</html>
